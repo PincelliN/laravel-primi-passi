@@ -44,14 +44,13 @@
                 <h3>Devo mettermi ha studiare</h3>
             @else
                 <h3>Linguaggi di programmazione conosciuti</h3>
-                <ul>
+                <ul class="list-group">
                     @foreach ($programmings_language as $programming_language)
-                        <li>{{ $programming_language }}</li>
+                        <li class="list-group-item">{{ $programming_language }}</li>
                     @endforeach
+                </ul>
+            @endempty
 
-                @endempty
-
-            </ul>
         </div>
     </div>
 </body>

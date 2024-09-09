@@ -27,7 +27,5 @@ Route::get('/', function () {
         'HTML','CSS','JAVASCRIPT','PHP'
     ];
 
-
-
     return view('home',compact('mess','user','programmings_language'));
 });

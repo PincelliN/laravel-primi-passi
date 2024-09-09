@@ -12,10 +12,19 @@
     <h1>{{ $mess }}</h1>
 
     <p>Ciao {{ $user['name'] }} {{ $user['lastname'] }} tanti auguri per i sui {{ $user['age'] }} anni</p>
-    <ul>
-        @foreach ($programmings_language as $programming_language)
-            <li>{{ $programming_language }}</li>
-        @endforeach
+
+
+
+    @if (empty($programming_language))
+        <h3>Linguaggi di programmazione conosciuti</h3>
+        <ul>
+            @foreach ($programmings_language as $programming_language)
+                <li>{{ $programming_language }}</li>
+            @endforeach
+        @else
+            <h3>Devo mettermi ha studiare</h3>
+    @endif
+
     </ul>
 
 </body>

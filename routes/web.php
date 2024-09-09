@@ -14,5 +14,20 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+
+    $mess= 'Hello World';
+
+    $user = [
+        'name' => 'Nicolò',
+        'lastname' => 'Pincelli',
+        'age' => 32
+    ];
+
+    $programmings_language=[
+        'HTML','CSS','JAVASCRIPT','PHP'
+    ];
+
+
+
+    return view('home',compact('mess','user','programmings_language'));
 });

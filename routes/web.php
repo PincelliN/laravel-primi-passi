@@ -21,7 +21,7 @@ Route::get('/', function () {
         'name' => 'Nicolò',
         'lastname' => 'Pincelli',
         'age' => 32
-    ];
+    ] ;
 
     $programmings_language = [
         'HTML',
@@ -31,10 +31,10 @@ Route::get('/', function () {
     ];
 
     return view('home', compact('mess', 'user', 'programmings_language'));
-});
+})->name('home') ;
 
 
 Route::get('/about', function () {
 
     return view(('about'));
-});
+})->name('about') ;

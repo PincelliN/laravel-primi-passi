@@ -15,15 +15,16 @@
 
 
 
-    @if (empty($programming_language))
+    @empty($programmings_language)
+        <h3>Devo mettermi ha studiare</h3>
+    @else
         <h3>Linguaggi di programmazione conosciuti</h3>
         <ul>
             @foreach ($programmings_language as $programming_language)
                 <li>{{ $programming_language }}</li>
             @endforeach
-        @else
-            <h3>Devo mettermi ha studiare</h3>
-    @endif
+
+        @endempty
 
     </ul>
 

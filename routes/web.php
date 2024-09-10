@@ -30,11 +30,11 @@ Route::get('/', function () {
         'PHP'
     ];
 
-    return view('home', compact('mess', 'user', 'programmings_language'));
+    return view('guest.home', compact('mess', 'user', 'programmings_language'));
 })->name('home') ;
 
 
 Route::get('/about', function () {
 
-    return view(('about'));
+    return view(('guest.about'));
 })->name('about') ;
